@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ MediaForge
+#  MediaForge
 
 ### Multimedia Processing Without Upload or Compromise
 
