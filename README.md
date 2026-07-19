@@ -4,22 +4,18 @@
 
 ### Multimedia Processing Without Upload or Compromise
 
-Client-side multimedia toolkit built with **React + TypeScript + Vite**.
+A modern **client-side multimedia processing toolkit** built with **React, TypeScript, and Vite**.
 
-Convert videos, extract frames, and create stickers entirely inside your browser.
+Convert videos, extract frames, and create transparent stickers — all locally in your browser.
 
-No uploads • No servers • No privacy concerns
-
----
-
-<img src="./screenshots/demo.gif" width="100%" alt="MediaForge Demo">
+No Uploads • No Backend • Privacy First
 
 <br>
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite)
-![FFmpeg](https://img.shields.io/badge/FFmpeg.wasm-black)
+![FFmpeg.wasm](https://img.shields.io/badge/FFmpeg.wasm-Media_Processing-black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
@@ -28,90 +24,54 @@ No uploads • No servers • No privacy concerns
 
 # ✨ Overview
 
-**MediaForge** is a browser-based multimedia workstation designed around a **local-first workflow**.
+**MediaForge** is a browser-based multimedia workstation designed around a **local-first** philosophy.
 
-Unlike traditional online converters, every operation runs directly inside your browser using modern Web APIs and **FFmpeg.wasm**, meaning your files never leave your computer.
-
-Whether you need to extract audio from videos, capture perfect frames, or generate transparent stickers, MediaForge provides everything inside one clean brutalist interface.
-
----
-
-# 🖥️ Preview
-
-## Home
-
-<p align="center">
-<img src="./screenshots/home.png" width="95%">
-</p>
-
----
-
-## 🎬 Video ↔ Audio Converter
-
-Convert local videos into audio or combine an image with audio into a looping video.
-
-<p align="center">
-<img src="./screenshots/converter.png" width="95%">
-</p>
-
-### Features
-
-- Video → MP3
-- Video → WAV
-- Audio → Video
-- Client-side FFmpeg processing
-- Zero uploads
-
----
-
-## 📸 Frame Extractor
-
-Capture high-quality frames from any local video.
-
-<p align="center">
-<img src="./screenshots/extractor.png" width="95%">
-</p>
-
-### Features
-
-- Timeline seeking
-- Jump controls
-- PNG export
-- JPEG export
-- Instant preview
-
----
-
-## 🎨 Sticker Maker
-
-Turn any image into a transparent sticker using an interactive masking brush.
-
-<p align="center">
-<img src="./screenshots/sticker.png" width="95%">
-</p>
-
-### Features
-
-- Brush masking
-- Erase mode
-- Transparency preview
-- Outline customization
-- PNG export
+Instead of uploading files to remote servers, every operation happens directly inside your browser using modern Web APIs and **FFmpeg.wasm**. This keeps your media private while delivering fast processing for common multimedia tasks.
 
 ---
 
 # 🚀 Features
 
-- 🎥 Video → Audio Conversion
-- 🎵 Audio → Video Generation
-- 🖼️ Frame Extraction
-- ✂️ Sticker Creation
-- 🔒 Completely Client-side
-- ⚡ Fast Browser Processing
-- 📦 No Backend Required
-- 💾 No File Uploads
-- 🎨 Brutalist UI Design
-- 📱 Responsive Layout
+### 🎬 Video ↔ Audio Converter
+
+- Convert **Video → MP3**
+- Convert **Video → WAV**
+- Generate looping **Audio → Video**
+- Browser-based FFmpeg processing
+- Local file handling
+
+---
+
+### 📸 Frame Extractor
+
+- Load local video files
+- Timeline scrubbing
+- Frame preview
+- Export as PNG
+- Export as JPEG
+
+---
+
+### 🎨 Sticker Maker
+
+- Interactive masking brush
+- Erase & Restore modes
+- Adjustable brush size
+- Transparency preview
+- Outline customization
+- Transparent PNG export
+
+---
+
+# 🔒 Privacy First
+
+MediaForge is built around a **Local-First** workflow.
+
+- ✅ Files never leave your device
+- ✅ No cloud uploads
+- ✅ No backend server
+- ✅ No account required
+- ✅ No data collection
 
 ---
 
@@ -119,40 +79,37 @@ Turn any image into a transparent sticker using an interactive masking brush.
 
 | Technology | Purpose |
 |------------|----------|
-| React | UI |
+| React | User Interface |
 | TypeScript | Type Safety |
-| Vite | Build Tool |
-| FFmpeg.wasm | Media Processing |
-| HTML5 Canvas | Sticker Editor |
-| Browser APIs | File Handling |
-| CSS | Brutalist Styling |
+| Vite | Development & Build Tool |
+| FFmpeg.wasm | Audio & Video Processing |
+| HTML5 Canvas | Sticker Editing |
+| Browser File APIs | Local File Access |
+| CSS | Brutalist UI Styling |
 
 ---
 
 # 🏗 Architecture
 
 ```
-            User Files
-                 │
-                 ▼
-      Browser File APIs
-                 │
-      ┌──────────┴──────────┐
-      │                     │
- FFmpeg.wasm          HTML Canvas
-      │                     │
-      └──────────┬──────────┘
-                 ▼
-          Download Result
+                 User Files
+                      │
+                      ▼
+             Browser File APIs
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+   FFmpeg.wasm               HTML5 Canvas
+        │                           │
+        └─────────────┬─────────────┘
+                      ▼
+              Processed Media
+                      │
+                      ▼
+                 Download File
 ```
 
-Everything runs **inside the browser**.
-
-No backend.
-
-No cloud storage.
-
-No tracking.
+Everything runs entirely inside your browser.
 
 ---
 
@@ -161,23 +118,21 @@ No tracking.
 ```
 MediaForge
 │
-├── src
+├── public/
+│
+├── src/
 │   ├── App.tsx
 │   ├── App.css
 │   ├── index.css
 │
-├── screenshots
-│
-├── public
-│
 ├── package.json
-│
+├── vite.config.ts
 └── README.md
 ```
 
 ---
 
-# ⚙ Installation
+# ⚙️ Installation
 
 Clone the repository
 
@@ -185,7 +140,7 @@ Clone the repository
 git clone https://github.com/yourusername/MediaForge.git
 ```
 
-Move into the project
+Navigate into the project
 
 ```bash
 cd MediaForge
@@ -197,19 +152,19 @@ Install dependencies
 npm install
 ```
 
-Run development server
+Start the development server
 
 ```bash
 npm run dev
 ```
 
-Build production version
+Build for production
 
 ```bash
 npm run build
 ```
 
-Preview production build
+Preview the production build
 
 ```bash
 npm run preview
@@ -217,55 +172,68 @@ npm run preview
 
 ---
 
-# 🔐 Privacy First
+# 📦 Core Functionality
 
-MediaForge is designed with a **Local-First** philosophy.
+## Video ↔ Audio Converter
 
-✔ Files never leave your computer
+- Video → MP3
+- Video → WAV
+- Audio + Image → Looping Video
+- Local browser processing
 
-✔ No server processing
+## Frame Extractor
 
-✔ No cloud uploads
+- Capture any frame from a video
+- Timeline navigation
+- PNG & JPEG export
 
-✔ No account required
+## Sticker Maker
 
-✔ No data collection
+- Paint mask on images
+- Transparent background
+- Adjustable outlines
+- PNG export
 
 ---
 
-# 🌟 Future Improvements
+# 🌟 Future Roadmap
 
-- Batch Processing
-- GIF Creator
-- Video Compression
-- Background Removal
-- Metadata Editor
-- Image Format Converter
-- OCR Support
-- Audio Trimming
-- Waveform Preview
-- Drag & Drop Uploads
+- Batch media processing
+- GIF creator
+- Video compression
+- Image format converter
+- Audio trimming
+- Waveform visualization
+- Drag & Drop uploads
+- Metadata editor
+- Dark/Light themes
 
 ---
 
 # 🤝 Contributing
 
-Contributions, feature requests, and bug reports are welcome.
+Contributions are welcome!
 
-Feel free to fork the repository and submit a Pull Request.
+If you'd like to improve MediaForge:
+
+1. Fork the repository
+2. Create a new feature branch
+3. Commit your changes
+4. Push the branch
+5. Open a Pull Request
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
 <div align="center">
 
-Made with ❤️ using React + TypeScript + FFmpeg.wasm
+**Built with React • TypeScript • Vite • FFmpeg.wasm**
 
-If you like this project, consider giving it a ⭐
+⭐ If you found this project useful, consider starring the repository!
 
 </div>
