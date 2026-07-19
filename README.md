@@ -1,6 +1,6 @@
 # MediaForge
 
-Off/Grid Suite is a client-side multimedia processing web app built with React, TypeScript, and Vite. It offers three local-first tools in a single-page experience: a video/audio converter, a frame extractor, and a sticker maker.
+MediaForge is a client-side multimedia processing web app built with React, TypeScript, and Vite. It offers three local-first tools in a single-page experience: a video/audio converter, a frame extractor, and a sticker maker.
 
 ## What the app does
 
