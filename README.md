@@ -237,3 +237,11 @@ This project is licensed under the **MIT License**.
 ⭐ If you found this project useful, consider starring the repository!
 
 </div>
+
+## 🌐 Live Demo
+
+Experience MediaForge in action without installing anything.
+
+🔗 **Check it out here:** https://mediaforge18.netlify.app
+
+All processing happens locally in your browser—no uploads, no backend, and no account required.
