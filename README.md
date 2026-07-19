@@ -1,67 +1,271 @@
-# MediaForge
+<div align="center">
 
-MediaForge is a client-side multimedia processing web app built with React, TypeScript, and Vite. It offers three local-first tools in a single-page experience: a video/audio converter, a frame extractor, and a sticker maker.
+# ⚡ MediaForge
 
-## What the app does
+### Multimedia Processing Without Upload or Compromise
 
-- Video → Audio conversion with WAV or MP3 export
-- Audio → Video looping export using a local still image and audio track
-- Local video frame capture and export as PNG or JPEG
-- Sticker editing with a mask brush, transparency preview, outline controls, and export
+Client-side multimedia toolkit built with **React + TypeScript + Vite**.
 
-## Architecture overview
+Convert videos, extract frames, and create stickers entirely inside your browser.
 
-- Frontend: React + TypeScript + Vite
-- Styling: custom CSS with a brutalist editorial aesthetic
-- Media processing: browser APIs for local file handling and ffmpeg.wasm for actual audio transcoding
-- Storage: none required; everything is local to the browser session
+No uploads • No servers • No privacy concerns
 
-## Project structure
+---
 
-- src/App.tsx: main application shell, tool state, and all tool implementations
-- src/App.css: visual design and layout styling
-- src/index.css: global resets and typography setup
-- package.json: scripts and dependencies
+<img src="./screenshots/demo.gif" width="100%" alt="MediaForge Demo">
 
-## Core features
+<br>
 
-### 1. Video ↔ Audio converter
-- Select a local video file and export audio as WAV or MP3
-- Select an audio file plus a still image to build a looped video preview
-- Uses ffmpeg.wasm for audio transcoding in the browser
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite)
+![FFmpeg](https://img.shields.io/badge/FFmpeg.wasm-black)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-### 2. Frame extractor
-- Load a local video file
-- Scrub through frames with a seek slider and time jump controls
-- Capture a current frame and export it as PNG or JPEG
+</div>
 
-### 3. Sticker maker
-- Import an image and paint a mask directly on a canvas
-- Toggle erase/restore brush modes, brush size, transparency preview, and outline styling
-- Export the final sticker as a transparent PNG
+---
 
-## Development
+# ✨ Overview
 
-Install dependencies:
+**MediaForge** is a browser-based multimedia workstation designed around a **local-first workflow**.
+
+Unlike traditional online converters, every operation runs directly inside your browser using modern Web APIs and **FFmpeg.wasm**, meaning your files never leave your computer.
+
+Whether you need to extract audio from videos, capture perfect frames, or generate transparent stickers, MediaForge provides everything inside one clean brutalist interface.
+
+---
+
+# 🖥️ Preview
+
+## Home
+
+<p align="center">
+<img src="./screenshots/home.png" width="95%">
+</p>
+
+---
+
+## 🎬 Video ↔ Audio Converter
+
+Convert local videos into audio or combine an image with audio into a looping video.
+
+<p align="center">
+<img src="./screenshots/converter.png" width="95%">
+</p>
+
+### Features
+
+- Video → MP3
+- Video → WAV
+- Audio → Video
+- Client-side FFmpeg processing
+- Zero uploads
+
+---
+
+## 📸 Frame Extractor
+
+Capture high-quality frames from any local video.
+
+<p align="center">
+<img src="./screenshots/extractor.png" width="95%">
+</p>
+
+### Features
+
+- Timeline seeking
+- Jump controls
+- PNG export
+- JPEG export
+- Instant preview
+
+---
+
+## 🎨 Sticker Maker
+
+Turn any image into a transparent sticker using an interactive masking brush.
+
+<p align="center">
+<img src="./screenshots/sticker.png" width="95%">
+</p>
+
+### Features
+
+- Brush masking
+- Erase mode
+- Transparency preview
+- Outline customization
+- PNG export
+
+---
+
+# 🚀 Features
+
+- 🎥 Video → Audio Conversion
+- 🎵 Audio → Video Generation
+- 🖼️ Frame Extraction
+- ✂️ Sticker Creation
+- 🔒 Completely Client-side
+- ⚡ Fast Browser Processing
+- 📦 No Backend Required
+- 💾 No File Uploads
+- 🎨 Brutalist UI Design
+- 📱 Responsive Layout
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| React | UI |
+| TypeScript | Type Safety |
+| Vite | Build Tool |
+| FFmpeg.wasm | Media Processing |
+| HTML5 Canvas | Sticker Editor |
+| Browser APIs | File Handling |
+| CSS | Brutalist Styling |
+
+---
+
+# 🏗 Architecture
+
+```
+            User Files
+                 │
+                 ▼
+      Browser File APIs
+                 │
+      ┌──────────┴──────────┐
+      │                     │
+ FFmpeg.wasm          HTML Canvas
+      │                     │
+      └──────────┬──────────┘
+                 ▼
+          Download Result
+```
+
+Everything runs **inside the browser**.
+
+No backend.
+
+No cloud storage.
+
+No tracking.
+
+---
+
+# 📂 Project Structure
+
+```
+MediaForge
+│
+├── src
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│
+├── screenshots
+│
+├── public
+│
+├── package.json
+│
+└── README.md
+```
+
+---
+
+# ⚙ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/MediaForge.git
+```
+
+Move into the project
+
+```bash
+cd MediaForge
+```
+
+Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server:
+Run development server
 
 ```bash
 npm run dev
 ```
 
-Build for production:
+Build production version
 
 ```bash
 npm run build
 ```
 
-## Notes
+Preview production build
 
-- The app is intentionally client-side and does not depend on a backend.
-- ffmpeg.wasm downloads its core assets from CDN URLs the first time it runs, so the first export may take a few moments.
-- Browser support for some media APIs varies, so the experience is best in modern Chromium-based browsers.
+```bash
+npm run preview
+```
+
+---
+
+# 🔐 Privacy First
+
+MediaForge is designed with a **Local-First** philosophy.
+
+✔ Files never leave your computer
+
+✔ No server processing
+
+✔ No cloud uploads
+
+✔ No account required
+
+✔ No data collection
+
+---
+
+# 🌟 Future Improvements
+
+- Batch Processing
+- GIF Creator
+- Video Compression
+- Background Removal
+- Metadata Editor
+- Image Format Converter
+- OCR Support
+- Audio Trimming
+- Waveform Preview
+- Drag & Drop Uploads
+
+---
+
+# 🤝 Contributing
+
+Contributions, feature requests, and bug reports are welcome.
+
+Feel free to fork the repository and submit a Pull Request.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+
+Made with ❤️ using React + TypeScript + FFmpeg.wasm
+
+If you like this project, consider giving it a ⭐
+
+</div>
